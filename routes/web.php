@@ -26,5 +26,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/projects',[AdminProjectController::class,'index'])->name('admin.projects.index');
 Route::get('/projects/{id}',[AdminProjectController::class,'show'])->name('admin.projects.show');
 Route::get('/projects/create',[AdminProjectController::class,'create'])->name('admin.projects.create');
+Route::post('/projects',[AdminProjectController::class,'store'])->name('admin.projects.store');
 
 
