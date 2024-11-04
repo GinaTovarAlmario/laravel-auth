@@ -24,3 +24,5 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/projects',[AdminProjectController::class,'index'])->name('admin.projects.index');
+Route::get('/projects/{id}',[AdminProjectController::class,'show'])->name('admin.projects.show');
+
