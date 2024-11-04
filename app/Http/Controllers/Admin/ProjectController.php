@@ -30,6 +30,8 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        $data = $request->validate();
+        $project = Project::create();
         return redirect()->route('admin.projects.index');
     }
 
