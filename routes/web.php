@@ -25,7 +25,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware('auth')->prefix('/admin')->name('admin.')->group(function () {
     Route::get('/projects', [AdminProjectController::class, 'index'])->name('projects.index');
+    Route::post('/projects', [AdminProjectController::class, 'store'])->name('projects.store');
     Route::get('/projects/create', [AdminProjectController::class, 'create'])->name('projects.create');
     Route::get('/projects/{project}', [AdminProjectController::class, 'show'])->name('projects.show');
-    Route::post('/projects', [AdminProjectController::class, 'store'])->name('projects.store');
+
+    Route::put("/albums/{id}", [AdminProjectController::class, "update"])->name("projects.update");
+    Route::delete("/albums/{id}", [AdminProjectController::class, "destroy"])->name("projects.delete");
+    Route::get("/albums/{id}/edit", [AdminProjectController::class, "edit"])->name("projects.edit");
+
+
 });
