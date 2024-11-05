@@ -5,7 +5,7 @@
         <div class="row justify-content-around">
             <div class="col-12 text-center">
                 <h1>
-                    Creating a New Project
+                    Editing {{ $project->title}}
                 </h1>
             </div>
             {{-- @if ($errors->any())
@@ -24,7 +24,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="title" name="title" value="{{ old('title'), $project->title }}">
+                    <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $project->title) }}">
                     @error('title')
                         <div class="alert alert-danger">
                             {{ $message }}
@@ -34,7 +34,7 @@
                 <div class="mb-3">
                     <label for="author" class="form-label">Author</label>
                     <input type="text" class="form-control" id="author" name="author"
-                        value="{{ old('author'),$project->author }}">
+                        value="{{ old('author',$project->author) }}">
                     @error('author')
                         <div class="alert alert-danger">
                             {{ $message }}
@@ -44,7 +44,7 @@
                 <div class="mb-3">
                     <label for="date" class="form-label">Date</label>
                     <input type="text" class="form-control" id="date" name="date"
-                        value="{{ old('date'),$project->date }}">
+                        value="{{ old('date',$project->date) }}">
                     @error('date')
                         <div class="alert alert-danger">
                             {{ $message }}
@@ -54,7 +54,7 @@
                 <div class="mb-3">
                     <label for="status" class="form-label">Status</label>
                     <input type="text" class="form-control" id="status" name="status"
-                        value="{{ old('status'),$project->status }}">
+                        value="{{ old('status',$project->status)}}">
                     @error('author')
                         <div class="alert alert-danger">
                             {{ $message }}
@@ -64,7 +64,7 @@
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
                     <textarea class="form-control" id="description" rows="6" name="description">
-                        {{ old('description'),$project->description }}
+                        {{ old('description',$project->description) }}
                     </textarea>
                     @error('description')
                         <div class="alert alert-danger">

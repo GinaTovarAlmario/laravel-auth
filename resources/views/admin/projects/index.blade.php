@@ -32,6 +32,8 @@
                                 <td>{{ $project->status }}</td>
                                 <td>
                                     <a href="{{ route('admin.projects.show', $project->id) }}" class="btn btn-sm btn-primary me-2">Show</a>
+                                    <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-sm btn-warning me-2">Edit</a>
+
                                 </td>
                             </tr>
                         @empty
