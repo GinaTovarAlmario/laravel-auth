@@ -62,7 +62,9 @@
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" id="description" rows="6" name="description" value="{{ old('description') }}"></textarea>
+                    <textarea class="form-control" id="description" rows="6" name="description">
+                        {{ old('description') }}
+                    </textarea>
                     @error('description')
                         <div class="alert alert-danger">
                             {{ $message }}
