@@ -29,17 +29,7 @@
                                 <td>{{ $project->author }}</td>
                                 <td>{{ $project->description }}</td>
                                 <td>
-                                    <a href="{{ route('admin.projects.show', $album->id) }}" class="btn btn-sm btn-primary me-2">Show</a>
-                                    {{-- <a href="{{ route('album.edit', $album->id) }}" class="btn btn-sm bedit me-2">Edit</a> --}}
-                                    {{-- <form action="{{ route('album.delete', $album->id) }}" method="POST"
-                                        class="d-inline">
-                                        @csrf
-                                        @method('DELETE')
-
-                                        <button type="submit" class="btn btn-sm bdelete text-white">
-                                            Delete
-                                        </button>
-                                    </form> --}}
+                                    <a href="{{ route('admin.projects.show', $project->id) }}" class="btn btn-sm btn-primary me-2">Show</a>
                                 </td>
                             </tr>
                         @empty
