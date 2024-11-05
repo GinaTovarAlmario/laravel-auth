@@ -41,8 +41,28 @@
                     @enderror
                 </div>
                 <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="text" class="form-control" id="date" name="date"
+                        value="{{ old('date') }}">
+                    @error('date')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label">Status</label>
+                    <input type="text" class="form-control" id="status" name="status"
+                        value="{{ old('status') }}">
+                    @error('author')
+                        <div class="alert alert-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
+                </div>
+                <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <input type="text" class="form-control" id="description" name="description" value="{{ old('description') }}">
+                    <textarea class="form-control" id="description" rows="6" name="description" value="{{ old('description') }}"></textarea>
                     @error('description')
                         <div class="alert alert-danger">
                             {{ $message }}
@@ -53,7 +73,7 @@
                     <button type="submit" class="btn btn-primary me-3">
                         Create New Project
                     </button>
-                    <button type="reset" class="btn btn-succes me-3">
+                    <button type="reset" class="btn btn-success me-3">
                         Reset
                     </button>
                 </div>
